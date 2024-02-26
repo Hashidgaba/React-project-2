@@ -3,7 +3,7 @@ import Header from './components/Header'
 import Administration from './components/Administration'
 import Admission from './components/Admission'
 import Position from './components/Position'
-import Contact from './components/Contact'
+import ContactForm from './components/Contact'
 import Home from './components/Home'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -18,7 +18,7 @@ function App() {
             <Route path="/administration" element={<Administration />} />
             <Route path="/admission" element={<Admission />} />
             <Route path="/position" element={<Position />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<ContactForm />} />
           </Route>
         </Routes>
       </Router>

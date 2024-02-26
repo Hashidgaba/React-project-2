@@ -9,14 +9,14 @@ export default function Header() {
         margin: '16px',
         fontWeight: 'bolder',
         fontStyle: 'italic',
-        fontSize: '2rem',
+        fontSize: '3rem',
         textShadow: '4px 2px brown'
 
     }
     return (
         <div className='Header'>
             <div className='flex flex-1'>
-                <h2 style={obj}>TIME COLLEGIATE</h2>
+                <h2 style={obj} className='scale'>TIME COLLEGIATE</h2>
                 <div style={{ width: '35vw', margin: '40px' }} className='flex'>
                     <div className='mobile'>
                         <i style={margin} class="fa-solid fa-phone gray"></i>
