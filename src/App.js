@@ -5,9 +5,7 @@ import Admission from './components/Admission'
 import Position from './components/Position'
 import ContactForm from './components/Contact'
 import Home from './components/Home'
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
 function App() {
   return (
     <div className="App">

@@ -17,11 +17,12 @@ export default function Home() {
         </div>
         <div className='right' >
           <h2>News Alert</h2>
-          <a href='#'><img src='https://lh3.googleusercontent.com/proxy/Du_77aXk-NDoycYArfno1qVc137pnQJzhLLcBuNh4E-Iuaw6rvJ1OCVTUs69oGwq2fwBusqD6bMIig-nA0bnh2gy4Qcf07-UvN8LwVg_ESgf5pWW0-W4_TJFmKl-YIKYKzLO0qHi9FVyrZtClAZDrEpWC5M' alt='example' /></a>
+         <img src='https://lh3.googleusercontent.com/proxy/G7-P2r4SdGrwPri7hshb2TTZOy3cs3LezwsGNt_1ipVF5X1TmlUeIUoe7tpFu56zVdA6eBYJAvMMsbnwtyO-1OBurRDRsPVvJWUJ1xUfzfoPLW6foo9p_luty3xdfpyZycmyCXS7kE603fvc_53GGkcnfK0'/>
         </div>
       </div>
 
       {/*flip card*/}
+      
       <div className='fliP-cont'>
         <div class="flip-card">
           <div class="flip-card-inner">

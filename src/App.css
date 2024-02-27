@@ -5,3 +5,13 @@
 body{
   background-color: black;
 }
+
+::placeholder{
+  color:gray;
+  font-size:1rem;
+  font-style:italic;
+  font-weight: bolder;
+}
+button:hover{
+  background-color: black;
+}
