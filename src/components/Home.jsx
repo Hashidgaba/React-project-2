@@ -15,25 +15,25 @@ export default function Home() {
 
             We emphasize on each and every portion of the entire syllabus and notes prepared by our experienced professors are provided to the students in original print. Frequent testing and timely result announcement besides constant contact between management and parents through most modern communication systems is what keeps Practical Centre ahead of all coaching institutes in the city.</span>
         </div>
-        <div className='right' >
+        <div className='right'>
           <h2>News Alert</h2>
-         <img src='https://lh3.googleusercontent.com/proxy/G7-P2r4SdGrwPri7hshb2TTZOy3cs3LezwsGNt_1ipVF5X1TmlUeIUoe7tpFu56zVdA6eBYJAvMMsbnwtyO-1OBurRDRsPVvJWUJ1xUfzfoPLW6foo9p_luty3xdfpyZycmyCXS7kE603fvc_53GGkcnfK0'/>
+          <img src='https://lh3.googleusercontent.com/proxy/G7-P2r4SdGrwPri7hshb2TTZOy3cs3LezwsGNt_1ipVF5X1TmlUeIUoe7tpFu56zVdA6eBYJAvMMsbnwtyO-1OBurRDRsPVvJWUJ1xUfzfoPLW6foo9p_luty3xdfpyZycmyCXS7kE603fvc_53GGkcnfK0' />
         </div>
       </div>
 
       {/*flip card*/}
-      
+
       <div className='fliP-cont'>
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-            <i class="fa-regular fa-user user"></i>
-            <h2>Chairman</h2>
+              <i class="fa-regular fa-user user"></i>
+              <h2 className='flip-heading'>Chairman</h2>
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1>
+              <h3>chairman</h3>
               <p>Architect & Engineer</p>
-              <p>We love that guy</p>
+             <button className='btn'>READ MORE</button>
             </div>
           </div>
         </div>
@@ -41,14 +41,14 @@ export default function Home() {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-            <i class="fa-regular fa-user user"></i>
-            <h2>Director</h2>
+              <i class="fa-regular fa-user user"></i>
+              <h2 className='flip-heading'> Director</h2>
 
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1>
+              <h3>Director</h3>
               <p>Architect & Engineer</p>
-              <p>We love that guy</p>
+              <button className='btn'>READ MORE</button>
             </div>
           </div>
         </div>
@@ -57,12 +57,12 @@ export default function Home() {
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <i class="fa-solid fa-check user"></i>
-              <h2>Critearia</h2>
+              <h2 className='flip-heading'>Critearia</h2>
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1>
+              <h3>Critearia</h3>
               <p>Architect & Engineer</p>
-              <p>We love that guy</p>
+              <button className='btn'>READ MORE</button>
             </div>
           </div>
         </div>
@@ -70,13 +70,13 @@ export default function Home() {
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-            <i class="fa-solid fa-bars user"></i>
-              <h2>Policies</h2>
+              <i class="fa-solid fa-bars user"></i>
+              <h2 className='flip-heading'>Policies</h2>
             </div>
             <div class="flip-card-back">
-              <h1>John Doe</h1>
+              <h3>Policies</h3>
               <p>Architect & Engineer</p>
-              <p>We love that guy</p>
+              <button className='btn'>READ MORE</button>
             </div>
           </div>
         </div>

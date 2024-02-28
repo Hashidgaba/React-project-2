@@ -131,7 +131,6 @@ const styles = {
     textAlign: 'center',
     marginBottom: '20px',
    fontSize:'2.4rem',
-   textShadow:'2px 5px 2px black'
 
   },
   form: {

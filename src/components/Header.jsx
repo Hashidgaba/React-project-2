@@ -38,7 +38,6 @@ export default function Header() {
                 <li style={margin} ><Link className='color' to= '/'>Home</Link></li>
                     <li style={margin} ><Link className='color' to= '/administration'>Administration</Link></li>
                     <li style={margin}><Link className='color' to= '/admission'>Admission</Link></li>
-                    <li style={margin}><Link className='color' to= '/position'>Positions</Link></li>
                     <li style={margin}><Link className='color' to= '/contact'>contact</Link></li>
                </ul>
                <Link to='https://www.google.com' target='blank'><i style={{margin:'0px 10rem'}} class="fa-solid fa-magnifying-glass color-1"></i></Link>

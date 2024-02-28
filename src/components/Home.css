@@ -17,19 +17,21 @@
 }
 
 h2 {
-    margin: 10px 0px;
     background: linear-gradient(to right, blue, orange, aqua, purple);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 3rem;
     font-style: italic;
+    text-align: center;
+    font-size: 3rem;
+    margin: 10px 0px;
 }
 
-.left span {
+ span {
     line-height: 1.2rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
+    color:white
 }
 
 .right {
@@ -99,4 +101,32 @@ h2 {
     font-size: 2rem;
    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff7e5f, #feb47b);
 
+}
+
+h3{
+    font-weight: bolder;
+    background: linear-gradient(to right, blue, orange, aqua, purple);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.4rem;
+    margin:10px 0px
+}
+
+.flip-heading{
+    font-size: 2rem;
+}
+
+.btn{
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s linear;
+    margin-top: 10px;
+}
+.btn:hover{
+    background-color: #007bff8c;
 }

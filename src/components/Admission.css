@@ -1,0 +1,41 @@
+.admisson {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(24, 23, 23);
+}
+
+.dot {
+    list-style-type: disc;
+    margin: 6px;
+    font-size: 1.1rem;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.admission-flex {
+    width: 55%;
+    height: 55%;
+
+}
+
+.keypoints {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.right-1 {
+    height: 55%;
+    overflow: hidden;
+}
+
+.active {
+    background-color: rgba(128, 128, 128, 0.582);
+    padding: 10px;
+    padding-left: 17px;
+    width: 100%;
+    margin: 10px;
+}

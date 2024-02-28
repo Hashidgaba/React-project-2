@@ -1,14 +1,12 @@
-h2{
 
-    text-align: center;
-    font-size: 3rem;
-
-}
 
 .flex-conatiner{
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
+
+
 .img-cont {
     position: relative;
     width: 400px;
@@ -44,6 +42,10 @@ h2{
     opacity: 1;
 }
 
+
+.chairman{
+    margin-top: 30px;
+}
 
 
 
