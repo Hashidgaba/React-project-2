@@ -4,7 +4,6 @@ import Admission from './components/Admission'
 import ContactForm from './components/Contact'
 import Home from './components/Home'
 import Layout from './components/Layout'
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   
@@ -16,11 +15,8 @@ function App() {
           <Route path="/administration" element={<Layout><Administration /></Layout>} />
           <Route path="/admission" element={<Layout><Admission /></Layout>} />
           <Route path="/contact" element={<Layout><ContactForm /></Layout>} />
-
         </Routes>
       </Router>
-
-
     </div>
   );
 }

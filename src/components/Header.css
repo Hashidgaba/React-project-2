@@ -2,8 +2,7 @@
     width: 100%;
     background-color: rgb(43, 12, 12);
     color: white;
-    height: 14vh;
-    
+    overflow: hidden;
 }
 
 .flex{
