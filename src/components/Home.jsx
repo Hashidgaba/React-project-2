@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className='right'>
           <h2>News Alert</h2>
-          <img src='https://lh3.googleusercontent.com/proxy/G7-P2r4SdGrwPri7hshb2TTZOy3cs3LezwsGNt_1ipVF5X1TmlUeIUoe7tpFu56zVdA6eBYJAvMMsbnwtyO-1OBurRDRsPVvJWUJ1xUfzfoPLW6foo9p_luty3xdfpyZycmyCXS7kE603fvc_53GGkcnfK0'/>
+          <img src='https://lh3.googleusercontent.com/proxy/pbJ33UfRZrqigmB9niCipDBu_eaV65jtIHqst_NmyeA0sIl1Cy0zNv3enLdu9TsnzcT4LI_zjWSxRBRQeHln4Jqu0JqowInsYdy5O9ezq_ifMVM2hoXW12UrSmyUaVOCl8KJYgYzmI89dhMO0X4-KysEq-E' alt='IMAGE' />
         </div>
       </div>
 

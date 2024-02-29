@@ -1,14 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import '../App.css';
+import React, { useState } from 'react';
+import './ContactForm.css';
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
+    message: ''
   });
 
   const [errors, setErrors] = useState({});
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const validateForm = () => {
     let newErrors = {};
@@ -17,9 +25,10 @@ const ContactForm = () => {
       newErrors.name = 'Name is required';
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email.trim() || !emailRegex.test(formData.email)) {
-      newErrors.email = 'Valid email is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Invalid email address';
     }
 
     if (!formData.message.trim()) {
@@ -30,148 +39,86 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (validateForm()) {
-      console.log('Form submitted:', formData);
-      setIsFormSubmitted(true);
+      setIsSubmitting(true);
+
+      try {
+        // Replace the following API call with your actual API endpoint
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+
+        const data = await response.json();
+        console.log('API Response:', data);
+
+        // Reset the form
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+
+        setIsSubmitting(false);
+      } catch (error) {
+        console.error('Error:', error);
+        setIsSubmitting(false);
+      }
     }
-  };
-
-  useEffect(() => {
-    if (isFormSubmitted) {
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-
-      setIsFormSubmitted(false);
-    }
-  }, [isFormSubmitted]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-
-    setErrors({
-      ...errors,
-      [name]: undefined,
-    });
   };
 
   return (
-    <div style={styles.container}>
-      <h3 style={styles.heading}>Get in touch </h3>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            style={styles.input}
-            placeholder='NAME'
-          />
-          {errors.name && (
-            <span style={styles.error}>{errors.name}</span>
-          )}
-        </div>
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Email:</label>
-          <input
-            type="text"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            style={styles.input}
-            placeholder=' Enter your Email'
-          />
-          {errors.email && (
-            <span style={styles.error}>{errors.email}</span>
-          )}
-        </div>
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Message:</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            style={styles.textarea}
-            placeholder = 'Show your thoughts'
-          />
-          {errors.message && (
-            <span style={styles.error}>{errors.message}</span>
-          )}
-        </div>
-        <button className='btn' type="submit" style={styles.button}>
-          Submit
-        </button>
-      </form>
-    </div>
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="form-group">
+        <label htmlFor="name">Name:</label>
+        <input
+        placeholder='NAME'
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        {errors.name && <p className="error">{errors.name}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="email">Email:</label>
+        <input
+        placeholder='EMAIL'
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        {errors.email && <p className="error">{errors.email}</p>}
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="message">Message:</label>
+        <textarea
+        placeholder='Show Your Thoughts'
+        cols="15"
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+        {errors.message && <p className="error">{errors.message}</p>}
+      </div>
+
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Submitting...' : 'Submit'}
+      </button>
+    </form>
   );
-};
-
-const styles = {
-  container: {
-    backgroundColor:'rgb(41, 11, 11)',
-    maxWidth: '400px',
-    margin: 'auto',
-    padding: '20px',
-    borderRadius: '8px',
-    marginTop: '50px',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-  },
-  heading: {
-    textAlign: 'center',
-    marginBottom: '20px',
-   fontSize:'2.4rem',
-
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  formGroup: {
-    marginBottom: '15px',
-    overflow:'hidden',
-  },
-  label: {
-    marginBottom: '8px',
-    fontSize:'1.2rem'
-  },
-  input: {
-    padding: '8px',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-    width:'100%',
-    backgroundColor:''
-  },
-  textarea: {
-    padding: '8px',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-    minHeight: '100px',
-    width:'100%',
-  },
-  button: {
-    padding: '10px',
-    backgroundColor: '#007BFF',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    transition:'all 0.3s linear',
-  },
-  error: {
-    color: 'red',
-    fontSize: '12px',
-  },
 };
 
 export default ContactForm;
