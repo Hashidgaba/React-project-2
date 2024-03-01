@@ -46,7 +46,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
 
       try {
-        // Replace the following API call with your actual API endpoint
+        
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
           method: 'POST',
           headers: {

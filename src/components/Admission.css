@@ -25,17 +25,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .right-1 {
     height: 55%;
     overflow: hidden;
 }
-
-.active {
-    background-color: rgba(128, 128, 128, 0.582);
-    padding: 10px;
-    padding-left: 17px;
-    width: 100%;
-    margin: 10px;
+.link{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.644);
+    padding: 10px 20px;
 }

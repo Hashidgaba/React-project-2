@@ -18,15 +18,7 @@
 .gray{
     color: gray;
 }
-.color{
-    text-decoration: none;
-    color: white;
-    transition: all 0.3s linear;
-}
-.color:hover{
-    text-decoration: underline;
-    color: aqua;
-}
+
 .social-links a{
     text-decoration: none;
     color: white;
@@ -38,6 +30,16 @@
     transition: all 0.3s linear;
  
 }
+
+.color-2{
+    color: wheat;
+    transition: all 0.7s linear;
+}
+.color-2:hover{
+    color: aqua;
+    text-decoration: underline;
+}
+
 .fa-facebook:hover{
     background-color: rgb(59, 89, 152);
 }
@@ -63,6 +65,12 @@ ul li{
     color: white;
 
 }
+
+ul li a{
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
 .color-1{
     color: aqua;
     transition: all 0.3s linear;
@@ -83,4 +91,10 @@ ul li{
     to{
         transform: scale(1)  ;
     }
+}
+.active{
+    padding: 0px;
+    color: aqua;
+    background-color: transparent;
+    text-decoration: underline;
 }

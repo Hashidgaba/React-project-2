@@ -1,9 +1,9 @@
 import React from 'react'
 import './Header.css'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 export default function Header() {
     let margin = {
-        margin: '10px'
+        margin: '10px '
     }
     let obj = {
         margin: '16px',
@@ -20,11 +20,11 @@ export default function Header() {
                 <div style={{ width: '35vw', margin: '40px' }} className='flex'>
                     <div className='mobile'>
                         <i style={margin} class="fa-solid fa-phone gray"></i>
-                        <a className='color'>033333333333</a>
+                        <a className='color-2'>033333333333</a>
                     </div>
                     <div className='login'>
                         <i style={margin} class="fa-solid fa-user gray"></i>
-                        <a className='color' href='#'>parents Login</a>
+                        <a className='color-2' href='#'>parents Login</a>
                     </div>
                     <div className='social-links flex' style={{ width: '10vw' }}>
                         <a href='#'><i style={margin} class="fa-brands fa-facebook background"></i></a>
@@ -35,12 +35,12 @@ export default function Header() {
             </div>
             <nav className='flex'>
                 <ul>
-                <li style={margin} ><Link className='color' to= '/'>Home</Link></li>
-                    <li style={margin} ><Link className='color' to= '/administration'>Administration</Link></li>
-                    <li style={margin}><Link className='color' to= '/admission'>Admission</Link></li>
-                    <li style={margin}><Link className='color' to= '/contact'>contact</Link></li>
-               </ul>
-               <Link to='https://www.google.com' target='blank'><i style={{margin:'0px 10rem'}} class="fa-solid fa-magnifying-glass color-1"></i></Link>
+                    <li style={margin} ><NavLink className= {(e) => {return e.isActive?'active' : ""}}  to='/'>Home</NavLink></li>
+                    <li style={margin} ><NavLink   to='/administration'>Administration</NavLink></li>
+                    <li style={margin}><NavLink    to='/admission'>Admission</NavLink></li>
+                    <li style={margin}><NavLink    to='/contact'>contact</NavLink></li>
+                </ul>
+                <NavLink to='https://www.google.com' target='blank'><i style={{ margin: '0px 10rem' }} class="fa-solid fa-magnifying-glass color-1"></i></NavLink>
             </nav>
             <Outlet />
         </div>

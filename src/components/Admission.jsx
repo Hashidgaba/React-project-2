@@ -14,16 +14,15 @@ export default function Admission() {
             <li className='dot'>In case, if the parents/guardians are out of City / Country, they must nominate a representative and inform the management with all his / her contact sources.</li>
             <li className='dot'> Every child is expected to be dressed up in decent and neat attire. His / her personality should reflect the values of our culture and society.</li>
             <li className='dot'> The management reserves the right to reject any admission without giving a reason.</li>
-           
+
 
           </ul>
         </div>
         <div className='right-1'>
           <div className='keypoints'>
-          <h2>Related links</h2>
-          <Link className='color active' to='/contact'>contact</Link>
-          <Link className='color ' to='/admission' style={{width:'100%'}}>admission</Link>
-
+            <h2>Related links</h2>
+            <Link className='link' to='/contact' style={{ width: '100%' }}>contact</Link>
+            <Link to='/admission' style={{ width: '100%' }}>admission</Link>
           </div>
         </div>
 

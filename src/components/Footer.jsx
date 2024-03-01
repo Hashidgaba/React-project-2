@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -9,8 +9,8 @@ export default function Footer() {
         <p>© 2015 All rights reserved. Powered by Kreative Worx</p>
       </div>
       <div className='right-footer' >
-        <Link className='color' to='/contact'>contact</Link>
-        <Link className='color' to='/admission'>admission</Link>
+        <NavLink className= {(e) => {return e.isActive?'active' : ""}} to='/contact'>contact</NavLink>
+        <NavLink className= {(e) => {return e.isActive?'active' : ""}} to='/admission'>admission</NavLink>
       </div>
     </div>
   )
