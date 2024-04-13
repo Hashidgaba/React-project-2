@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import { Outlet, NavLink } from "react-router-dom";
 export default function Header() {
+
     let margin = {
         margin: '10px '
     }
@@ -13,11 +14,12 @@ export default function Header() {
         textShadow: '4px 2px brown'
 
     }
+    
     return (
         <div className='Header'>
             <div className='flex flex-1'>
                 <h2 style={obj} className='scale'>TIME COLLEGIATE</h2>
-                <div style={{ width: '35vw', margin: '40px' }} className='flex'>
+                <div  className='flex flex-2'>
                     <div className='mobile'>
                         <i style={margin} class="fa-solid fa-phone gray"></i>
                         <a className='color-2'>033333333333</a>
@@ -26,7 +28,7 @@ export default function Header() {
                         <i style={margin} class="fa-solid fa-user gray"></i>
                         <a className='color-2' href='#'>parents Login</a>
                     </div>
-                    <div className='social-links flex' style={{ width: '10vw' }}>
+                    <div className='social-links flex'>
                         <a href='#'><i style={margin} class="fa-brands fa-facebook background"></i></a>
                         <a href='#'><i style={margin} class="fa-brands fa-twitter background"></i></a>
                         <a href='#'><i style={margin} class="fa-brands fa-linkedin background"></i></a>
@@ -35,8 +37,8 @@ export default function Header() {
             </div>
             <nav className='flex'>
                 <ul>
-                    <li style={margin} ><NavLink className= {(e) => {return e.isActive?'active' : ""}}  to='/'>Home</NavLink></li>
-                    <li style={margin} ><NavLink   to='/administration'>Administration</NavLink></li>
+                    <li style={margin}><NavLink   to='/'>Home</NavLink></li>
+                    <li style={margin} ><NavLink  to='/administration'>Administration</NavLink></li>
                     <li style={margin}><NavLink    to='/admission'>Admission</NavLink></li>
                     <li style={margin}><NavLink    to='/contact'>contact</NavLink></li>
                 </ul>

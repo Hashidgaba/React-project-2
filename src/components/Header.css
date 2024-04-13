@@ -3,6 +3,7 @@
     background-color: rgb(43, 12, 12);
     color: white;
     overflow: hidden;
+    max-height: max-content;
 }
 
 .flex{
@@ -13,10 +14,15 @@
 }
 
 .flex-1{
-    height: 12vh;
+    height: 14vh;
 }
+.flex-2{
+    margin-right: 5px;
+    font-size: 15px
+}
+
 .gray{
-    color: gray;
+    color: whitesmoke;
 }
 
 .social-links a{
@@ -52,6 +58,7 @@
 
 nav{
     background-color: rgb(15, 15, 59);
+    
 }
 nav input{
     background-color: transparent;
@@ -70,6 +77,11 @@ ul li a{
   color: white;
   text-decoration: none;
   transition: all 0.3s linear;
+  font-style: italic;
+  font-size: 1rem;
+}
+ul li a:hover{
+    color: aqua;
 }
 .color-1{
     color: aqua;
@@ -96,5 +108,6 @@ ul li a{
     padding: 0px;
     color: aqua;
     background-color: transparent;
+    transition: all 0.3s linear;
     text-decoration: underline;
 }
